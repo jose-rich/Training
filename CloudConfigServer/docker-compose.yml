@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  cloudConfigServer:
+    image: cloud-config-server.jar
+    ports:
+      - '8800:8888'
+    environment:
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/Subash1010/Ideas2It-Training

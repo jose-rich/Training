@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jose-rich/Training
+          search-paths:
+          - healthcare*
+        bootstrap: true
+  application:
+    name: application
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, bus-refresh, beans, env
